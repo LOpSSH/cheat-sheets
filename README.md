@@ -38,6 +38,7 @@
 		- [Schema Manager](src/symfony/Doctrine/Schema.md) Schema管理器的使用
 		- [batch processing](src/symfony/Doctrine/batch_processing.md) 批量处理
 		- [truncate table](src/symfony/Doctrine/truncate_table.md) 截断表
+		- [SQL log](src/symfony/Doctrine/sql_log.md) 开发模式下配置SQL log
 	- [Router](src/symfony/Router/README.md) 路由相关
 		- [routing.yml](src/symfony/Router/routing.yml.md) yml路由配置示例
 	- [Form](src/symfony/Form/README.md) 表单相关
@@ -97,6 +98,9 @@
 		- [Filesystem](src/symfony/Components/Filesystem.md) 对文件系统做了面向对象的封装
 		- [Dotenv](src/symfony/Components/Dotenv.md) 设置环境变量
 		- [Ldap](src/symfony/Components/Ldap.md) LDAP server连接相关
+		- [Config](src/symfony/Components/Config.md) 配置文件组件，支持YAML, XML, INI格式或数据库。
+		- [Debug](src/symfony/Components/Debug.md) 方便调试的组件
+		- [VarDumper](src/symfony/Components/VarDumper) 调试时打印信息的组件
 	- [Bundles Note](src/symfony/Bundles-Note/README.md) 第三方bundle使用笔记 
 		- [DoctrineFixturesBundle](src/symfony/Bundles-Note/DoctrineFixturesBundle.md)	初始化数据Bundle笔记
 	- [symfony coding standard](src/symfony/SymfonyCodingStandard/README.md) Symfony编码规范
@@ -174,6 +178,7 @@
 	- [scp](src/Linux/scp.md)
 	- [rz & sz](src/Linux/rzsz.md)
 	- [iconv](src/Linux/iconv.md)
+	- [Aliyun服务器配置IPV6](src/Linux/ipv6_aliyun.md)
 9.  [Go](src/Go/README.md "golang")
 	- [gofmt vs go fmt](src/Go/gofmt.md)
 	- [Compiler Directives](src/Go/CompilerDirectives.md)
@@ -190,6 +195,8 @@
     - [Others Library](src/Go/OthersLibrary/README.md) 其他类库笔记
     - [windows下开发](src/Go/windows/README.md)
 		- [call cmd.exe](src/Go/windows/call_cmd.md) 调用cmd.exe并隐藏窗口
+	- [Fatal Error](src/Go/FatalError/README.md) 常见的fatal error
+		- [fatal error: concurrent map read and map write](src/Go/FatalError/ConcurrentMap.md)并发读写map错误
 10. [redis](src/Redis/README.md "redis")
 	- [basic](src/Redis/basic.md) redis基础
 	- [redis windows](src/Redis/redis_windows.md)redis在windows上的使用
@@ -197,7 +204,7 @@
 	- [master slave](src/Redis/master-slave.md) redis配置主从
 	- [redis.conf](src/Redis/redis.conf.md) redis配置文件介绍
 	- [Predis VS phpredis](src/Redis/PredisVSphpredis.md) Predis与phpredis对比
-11. [git note](src/git/README.md "git")
+11. [git相关](src/git/README.md "git")
 	- [git branch](src/git/branch.md) git分支相关
 	- [git tag](src/git/tag.md) git标签相关
 	- [rm commit log](src/git/rm-commit-log.md)
@@ -207,6 +214,8 @@
 	- [git update](src/git/update.md) git升级
 	- [rm git index](src/git/rm.md) 移除文件或目录的git索引
 	- [git recover](src/git/git_recover.md) git还原某个提交ID
+	- [Gogs](src/git/gogs.md) Gogs代码平台
+	- [Gitea](src/git/gitea.md) Gitea(Gogs的一个克隆)
 12. [javascript](src/javascript/README.md "javascript")
 	- [json convert](src/javascript/json.md)
 	- [flexible](src/javascript/flexible.md)
@@ -215,6 +224,8 @@
 	- [knockoutjs](src/javascript/knockoutjs.md)
 	- [vuejs](src/javascript/vuejs.md)
 	- [ActiveX Object](src/javascript/activex_object.md)判断对象是否存在的方法
+	- [requirejs](src/javascript/requirejs.md) requrejs引入js、css、fonts等
+	- [art template](src/javascript/art-template.md) art-template模板引擎
 13. [framework7](src/framework7.md "framework7")
 14. [markdown](src/markdown.md "markdown")
 15. [yii2](src/yii2.md)
@@ -259,6 +270,12 @@
 31. [FFmpeg](src/FFmpeg/README.md)
 	- [PHP-FFMpeg](src/FFmpeg/PHP-FFMpeg.md)
 32. [OAuth 2.0](src/OAuth2.0/README.md)
+	- [rfc 6749](src/OAuth2.0/rfc6749.md)
+    - Go
+        - [github.com/golang/oauth2](https://github.com/golang/oauth2)
+        - [github.com/dexidp/dex](https://github.com/dexidp/dex)
+        - [github.com/ory/fosite](https://github.com/ory/fosite)
+    - PHP
 33. [Modbus](src/Modbus/README.md)
 	- [SSCOM串口调试软件](src/Modbus/SSCOM.md)
 34. [CSS3](src/CSS3/README.md)
@@ -302,3 +319,30 @@
 53. [JavaBridge](src/JavaBridge/README.md)
 54. [ios](src/ios/README.md)
 	- [xcode](src/ios/xcode.md)
+55. **Security代码安全**
+	- [APP接口安全设计要点](src/Security/APP_API.md)
+	- 源代码安全审计
+		- [cobra](src/Security/cobra.md)
+55. 源代码安全审计
+	- [cobra](cobra.md)
+56. 用户认证与授权
+	- 单点登录SSO
+	- CAS
+	- OAuth2
+57. 消息队列
+	- [nsq](src/MQ/nsq.md)
+	- [RabbitMQ](src/MQ/RabbitMQ.md)
+	- [Kafka](src/MQ/Kafka.md)
+	- [ZeroMQ](src/MQ/ZeroMQ.md)
+	- [ActiveMQ](src/MQ/ActiveMQ.md)
+	- [RocketMQ](src/MQ/RocketMQ.md)
+58. [ZooKeeper](src/ZooKeeper/README.md)
+	- [基本概念](src/ZooKeeper/basic.md)
+	- [典型应用场景](src/ZooKeeper/scene.md)
+59. [Erlang](src/Erlang/README.md)
+60. [Scala](src/Scala/README.md)
+61. [Kotlin](src/Kotlin/README.md)
+62. [Go & PHP](src/GoPHP/README.md)
+	- goridge
+	- roadrunner
+	- Spiral Framework

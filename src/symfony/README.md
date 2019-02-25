@@ -36,6 +36,7 @@
 - [Schema Manager](Doctrine/Schema.md) Schema管理器的使用
 - [batch processing](Doctrine/batch_processing.md) 批量处理
 - [truncate table](Doctrine/truncate_table.md) 截断表
+- [SQL log](Doctrine/sql_log.md) 开发模式下配置SQL log
 #### [Router](Router/README.md) 路由相关
 - [routing.yml](Router/routing.yml.md) yml路由配置示例
 #### [Form](Form/README.md) 表单相关
@@ -95,6 +96,9 @@
 - [Filesystem](Components/Filesystem.md) 对文件系统做了面向对象的封装
 - [Dotenv](Components/Dotenv.md) 设置环境变量
 - [Ldap](Components/Ldap.md) LDAP server连接相关
+- [Config](Components/Config.md) 配置文件组件，支持YAML, XML, INI格式或数据库。
+- [Debug](Components/Debug.md) 方便调试的组件
+- [VarDumper](Components/VarDumper) 调试时打印信息的组件
 #### [Bundles Note](Bundles-Note/README.md) 第三方bundle使用笔记 
 - [DoctrineFixturesBundle](Bundles-Note/DoctrineFixturesBundle.md)	初始化数据Bundle笔记
 #### [symfony coding standard](SymfonyCodingStandard/README.md) Symfony编码规范
